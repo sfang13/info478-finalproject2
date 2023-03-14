@@ -1,0 +1,54 @@
+h3 {
+  text-align: center;
+  font-style: italic;
+}
+
+#creative h2, #creative p, #creative ol, h3, #exploratory {
+  color: #E0DBD7;
+}
+
+#description, #methods {
+  width: 90%;
+  font-size: 20px;
+}
+
+#creative > section, #creative ol {
+  display: flex;
+}
+
+#creative ol {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 75px;
+  list-style-type: upper-roman;
+}
+
+#creative img {
+  margin-left: 100px;
+  margin-right: 60px;
+  width: 40%;
+}
+
+#special img {
+  width: 40%;
+}
+
+#creative p {
+  margin-right: 100px;
+  font-size:20px;
+}
+
+#creative > section {
+  margin-top: 40px;
+}
+
+#creative a {
+  color: #FFA605;
+}
+
+#creative hr {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  border: 2px solid #E0DBD7;
+}

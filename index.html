@@ -1,1 +1,170 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="creative.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,500&display=swap"
+    rel="stylesheet">
+    <title>Space!</title>
+  </head>
+  <body>
+    <header>
+      <h1>Anxiety Indicator Incidence During The COVID-19 Pandemic</h1>
+    </header>
+    <main>
+      <section id="intro">
+        <h2>Purpose</h2>
+        <section>
+          <p>
+            A total of 275 million people worldwide currently have an anxiety disorder, and nearly one third of adults and adolescents in
+            the United States experience an anxiety disorder at some time in their lives.
+            Anxiety disorders can develop at any time, and can be triggered by various factors such as genetics,
+            environmental stressors, and traumatic experiences. Unfortunately, the COVID-19 pandemic has created a host of stressors that can worsen anxiety symptoms.
+            Social distancing and quarantine measures have lead to social isolation,
+            and the danger of contracting the virus or passing it on to others has caused persistent worrying.
+            Furthermore, the pandemic has disrupted daily routines and created economic and financial uncertainties,
+            causing instability and generating feelings of apprehension.
+            COVID-19 has ultimately led to a global rise in anxiety incidence, or the porportion of persons developing an anxiety disorder around the world.
+            It is more important than ever to study
+            the risk factors tied to anxiety incidence and how various subpopulations are impacted differently by these factors to better address their needs.
+            This data product aims to share the analyses performed in this study with the general public,
+            so no prior knowledge about anxiety indicator incidence is required to interpret the results presented.
+          </p>
+        </section>
+      </section>
+      <section id="exploratory">
+        <h2>Exploratory Analysis</h2>
+        <section id="e-images">
+          <img src="img/exploratory_sexes.png" alt="Moon landing">
+          <img src="img/exploratory_deaths.png" alt="Moon landing">
+          <img src="img/exploratory_age.png" alt="Moon landing">
+        </section>
+        <section id="description">
+          <p>This exploratory analysis of available datasets on anxiety incidence and pandemic impacts informed the creation of novel and unique data questions to investigate.
+            First, it revealed that anxiety indicator incidence spiked for all age groups near the end of 2020.
+            Similarly, new deaths seemed to reach its peak at the start of 2021.
+            This inspired an investigation into whether new deaths or total deaths and indicators of anxiety were correlated.
+          </p>
+          <p>The exploratory analysis also demonstrated that females tend to have higher DALY values from anxiety disorders than males from 1990-2019, prior to the pandemic.
+            The distribution of values for females is also greater. However, there are more high outliers for males.
+            This suggested that sex is likely a factor influencing the indicators of anxiety during the pandemic and should be further examined.
+          </p>
+          <p>
+            Overall, the exploratory analysis proposed that there are significant disparities in how anxiety disorders affect different subpopulations
+            during and prior to the pandemic, but it does not clearly explore how socioeconomic class or working conditions may play a role. However, prior research
+            illustrates how working from home may worsen feelings of isolation while essential workers experienced greater fear from increased risk of exposure.
+            Therefore, this study must also explore how education level as a proxy for workplace quality may be correlated with anxiety indicator incidence.
+          </p>
+        </section>
+      </section>
+      <section id="facts">
+        <h2>Reseach Questions</h2>
+        <ol>
+          <li>Are surpluses in anxiety incidence across all age groups during the pandemic correlated with increases in new or total deaths?</li>
+          <li>Are diverging distributions of DALYs from anxiety disorders male and female indicative of different impacts on either subpopulation by COVID-19?</li>
+          <li>Given that education levels impact employment, are variations in education attainment and subsequently workplace correlated with higher anxiety incidence?</li>
+        </ol>
+      </section>
+      <section id="jokes">
+        <h2>Data Sources</h2>
+        <section>
+          <article>
+            <p><a href="https://data.cdc.gov/Case-Surveillance/Weekly-United-States-COVID-19-Cases-and-Deaths-by-/pwn4-m3yp">Weekly United States COVID-19 Cases and Deaths by State</a></p>
+            <p>This dataset was chosen because it documents indicators of anxiety during the pandemic while other sources only provided anxiety incidences prior to 2019,
+              which is important to this research project because it intends to
+              investigate the coorelation between pandemic-related risk factors and
+              anxiety indicator incidence in various subpopulations.
+            </p>
+            <p>The significant features of the dataset therefore included "Indicators," which was set as "Symptoms of Anxiety Disorder"
+              to limit project scope to anxiety indicators. The variable "Group" was used to categorize the data by age, sex, or education level.
+              Additionally, "Time Period Start Date" was used when investigating change in anxiety indicators throughout the pandemic because
+              it indicated the first day of each week indicators were recorded.
+              Lastly, "Value" contained the reported frequency of symptoms.</p>
+          </article>
+          <article>
+            <p><a href="https://data.cdc.gov/NCHS/Indicators-of-Anxiety-or-Depression-Based-on-Repor/8pt5-q6wp">Indicators of Anxiety or Depression Based on Reported Frequency of Symptoms During Last 7 Days</a></p>
+            <p>This dataset was chosen because the number of COVID-19 cases and deaths likely contributed to the growth in indicators of anxiety during the pandemic.
+              Furthermore, it covers a similar date range to the anxiety indicator incidence data, meaning visualizations from both datasets can be easily compared.
+            </p>
+            <p>The significant features of this dataset were "New Deaths" and "Start Date," though the exploratory analysis also examined "Total Deaths."
+              Specifically, the number of new deaths recorded in "New Deaths" across time periods recorded in "Start Date" could be compared to indicators of anxiety
+              throughout the pandemic.
+            </p>
+          </article>
+        </section>
+      </section>
+      <section id="methods">
+        <h2>Methods</h2>
+        <p>Various plots were created in RStudio for the exploratory analysis and Tableau for the final analysis.
+          These included a scatter plot, multiple box and whisker plots, and line charts.
+          The box and whisker plots were created in the exploratory analysis because they are ideal for representing distribution of data.
+          Line charts were created when measuring almost any variable over time, as they are best for representing data measured in a continous progression.
+          Lastly, a scatter plot was created to compare new and total deaths because both variables were numeric and this plot is great for examining correlation between variables.
+        </p>
+      </section>
+      </section>
+      <section id="creative">
+        <h2>Results</h2>
+        <h3>Are surpluses in anxiety incidence across all age groups during the pandemic correlated with increases in new or total deaths?</h3>
+        <section id="special">
+          <img src="img/deaths_indicators.png" alt="Moon landing">
+          <section>
+            <p>
+              To answer the first question, two line charts were created side by side to match the dates from both the
+              anxiety indicator incidences and covid deaths datasets and reveal how the number of anxiety indicators
+              over time correlated with new COVID deaths. One significant trend is that the surplus in anxiety indicator incidences
+              correlated with the increase in new deaths at the end of 2020, the first year of covid. Furthermore, while both indicators of anxiety
+              and new deaths dropped in the following months, they rose again by September 2021. However, anxiety indicator incidences remained high
+              for the rest of the pandemic while new deaths eventually slowed again. Overall, this suggests that anxiety incidence across all age groups
+              during the pandemic correlated with increases in new deaths. However, there is missing anxiety indicator data which cannot be factored into this conclusion. 
+            </p>
+          </section>
+        </section>
+        <h3>Are diverging distributions of DALYs from anxiety disorders male and female indicative of different impacts on either subpopulation by COVID-19?</h3>
+        <section>
+          <img src="img/sex_time.png" alt="Moon landing">
+          <section>
+            <p>
+              To answer the second question, a line chart was created to investigate whether the diverging distributions of DALYs
+              from anxiety disorders for males and females seen in the exploratory analysis is indicative of COVID-19 impacting each subpopulation differently.
+              The visualization demonstrates that anxiety indicator incidence for both male and females was impacted by the pandemic.
+              The incidence value was highest at over 120 for females around November 2020 and 95 for males around January 2021.
+              These months roughly coincide with when the number of new COVID-19 deaths was highest.
+              The incidence value was lowest in June 2021 for both females and males. Overall,
+              anxiety indicator incidence was higher for females than males.
+              The difference between male and female anxiety levels were consistent over time.
+              Notably, the data has missing values, so neither line plot is continuous.
+              While females had a wider distribution of DALYs from anxiety disorders than males, their average DALY was already higher prior to the pandemic.
+              This likely explains why female anxiety indicator levels were consistently higher, and suggests that the pandemic impacted both subpopulations similarly.
+            </p>
+          </section>
+        </section>
+        <h3>Given that education levels impact employment, are variations in education attainment and subsequently workplace correlated with higher anxiety incidence?</h3>
+        <section>
+          <img src="img/education_time.png" alt="Moon landing">
+          <section>
+            <p>
+              The line chart created to answer the third question visualized how the highest levels of anxiety during the pandemic were
+              amongst people who had no high school degree and the lowest were amongst those who had a Bachelor’s degree or higher. 
+              Having an associates degree placed second highest and a high school degree placed third highest.
+              Around 1050 was the highest for people without high school diplomas while 650 was the highest for those with bachelor’s
+              degrees or higher, which is almost half of the initial value. This may be explained by people without high school
+              diplomas being more likely to work essential jobs that increase risk of exposure to COVID-19 while those with bachelor’s
+              degrees have office jobs that can be performed from home. However, people with an associate’s
+              degree experience higher levels of anxiety than those with a high school diploma.
+              Furthermore, in contrast to previous findings, anxiety indicator incidence was highest for
+              all subpopulations at the start of 2020, but low values later on could be due to data collection issues. Overall, better educational
+              attainment and subsequently workplace correlated with lower anxiety incidence.
+            </p>
+          </section>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <p>Authored by Sabrina Fang, Hugo Huo, Sebastian Tan <br>
+        Created March 13, 2023 for the Data Product Final Deliverable in INFO 478.
+      </p>
+    </footer>
+  </body>
+</html>
